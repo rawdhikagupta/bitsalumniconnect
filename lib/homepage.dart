@@ -16,10 +16,11 @@ class _HomepageState extends State<Homepage> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(40, 70, 0, 0),
+                  margin: EdgeInsets.fromLTRB(44, 70, 0, 0),
                   child: Text(
                     'Welcome to',
                     style: TextStyle(
+                      fontFamily: 'Roboto',
                       fontSize: 35,
                     ),
                     textAlign: TextAlign.left,
@@ -27,16 +28,9 @@ class _HomepageState extends State<Homepage> {
                 ),
                 Container(
                   margin: EdgeInsets.fromLTRB(40, 0, 0, 0),
-                  child: Text('AlmaConnect',
+                  child: Text('AlmaConnect \nBITSP',
                       style: TextStyle(
-                        fontSize: 40,
-                        fontWeight: FontWeight.bold,
-                      )),
-                ),
-                Container(
-                  margin: EdgeInsets.fromLTRB(40, 0, 0, 0),
-                  child: Text('BITSP',
-                      style: TextStyle(
+                        fontFamily: 'Roboto',
                         fontSize: 40,
                         fontWeight: FontWeight.bold,
                       )),
@@ -47,7 +41,7 @@ class _HomepageState extends State<Homepage> {
                     onPressed: () {
                       print('button was pressed');
                     },
-                    color: Colors.purple[800],
+                    color: Color(0xFF4B2E83),
                     shape:
                     RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                     child: Padding(
