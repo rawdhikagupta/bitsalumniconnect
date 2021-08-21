@@ -12,6 +12,7 @@ class _Page_sixState extends State<Page_six> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        bottom: false,
         child: SingleChildScrollView(
           child: Column(children: [
             Container(
@@ -102,6 +103,9 @@ class _Page_sixState extends State<Page_six> {
                   ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: 20,
             )
           ]),
         ),
