@@ -1,109 +1,190 @@
 import 'package:flutter/material.dart';
 
-class _Pagethree extends StatefulWidget {
-  const _Pagethree({Key? key}) : super(key: key);
-
+class SignUpPage extends StatefulWidget {
   @override
-  _PagethreeState createState() => _PagethreeState();
+  _SignUpPageState createState() => _SignUpPageState();
 }
 
-class _PagethreeState extends State<_Pagethree> {
+class _SignUpPageState extends State<SignUpPage> {
+  bool value = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        bottom: false,
-        child: SingleChildScrollView(
-          child: Column(children: [
-            Container(
-              alignment: Alignment.topRight,
-              margin: EdgeInsets.all(10),
-              child: ButtonTheme(
-                minWidth: 82,
-                height: 40,
-                child: OutlineButton(
-                  color: Colors.black,
+        body: SingleChildScrollView(
+            child: SafeArea(
+      child: Column(children: [
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.04,
+        ),
+        Row(
+          children: [
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                'X',
+                style: TextStyle(color: Color(0XFFBDBDBD), fontSize: 30),
+                textAlign: TextAlign.left,
+              ),
+            ),
+            Expanded(
+                child: Center(
+              child: Text(
+                "Sign Up",
+                style: TextStyle(
+                    fontFamily: 'Inter',
+                    fontSize: 40,
+                    fontWeight: FontWeight.w700,
+                    fontStyle: FontStyle.normal,
+                    color: Colors.black),
+                textAlign: TextAlign.right,
+              ),
+            )),
+            TextButton(
+              onPressed: () {},
+              child: Text(
+                "Login",
+                style: TextStyle(
+                  fontFamily: 'Inter',
+                  fontSize: 22,
+                  fontWeight: FontWeight.w500,
+                  fontStyle: FontStyle.normal,
+                  color: Color(0xFF4B2E83),
+                ),
+              ),
+            )
+          ],
+        ),
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.03,
+        ),
+        Center(
+          child: Container(
+            padding: EdgeInsets.fromLTRB(
+              16,
+              5,
+              16,
+              5,
+            ),
+            width: 400,
+            height: 70,
+            child: TextField(
+              decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                  ),
+                  fillColor: Color(0xffF6F6F6),
+                  filled: true,
+                  hintText: 'Name',
+                  hintStyle: TextStyle(color: Color(0xffBDBDBD), fontSize: 16)),
+            ),
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.fromLTRB(16, 5, 16, 5),
+          width: 400,
+          height: 70,
+          child: TextField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+                fillColor: Color(0xffF6F6F6),
+                filled: true,
+                hintText: 'Email',
+                hintStyle: TextStyle(color: Color(0xffBDBDBD), fontSize: 16)),
+          ),
+        ),
+        Container(
+          padding: EdgeInsets.fromLTRB(16, 5, 16, 5),
+          width: 400,
+          height: 70,
+          child: TextField(
+            decoration: InputDecoration(
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              fillColor: Color(0xffF6F6F6),
+              filled: true,
+              hintText: 'Password',
+              hintStyle: TextStyle(color: Color(0xffBDBDBD), fontSize: 16),
+              suffix: TextButton(
                   onPressed: () {},
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Help ?',
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                      ),
+                  child: Text(
+                    "SHOW",
+                    style: TextStyle(
+                      fontFamily: 'Inter',
+                      fontSize: 15,
+                      fontWeight: FontWeight.w500,
+                      fontStyle: FontStyle.normal,
+                      color: Color(0xFF4B2E83),
                     ),
-                  ),
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50)),
-                  borderSide: BorderSide(
-                    color: Color(0xFFA0A0A0),
-                    style: BorderStyle.solid,
-                    width: 2,
-                  ),
+                  )),
+            ),
+          ),
+        ),
+        Center(
+            child: Row(
+          children: [
+            Checkbox(
+                activeColor: Color(0xff4B2E83),
+                value: this.value,
+                onChanged: (bool value) {
+                  setState(() {
+                    this.value = value;
+                  });
+                }),
+            Text(
+              'I would like to receive your newsletter and \nother information',
+              style: TextStyle(
+                fontFamily: 'Inter',
+                fontSize: 15,
+                fontWeight: FontWeight.w400,
+                fontStyle: FontStyle.normal,
+                color: Color(0xFF666666),
+              ),
+            )
+          ],
+        )),
+        Container(
+            padding: EdgeInsets.only(top: 20),
+            child: ButtonTheme(
+                minWidth: 343,
+                height: 54,
+                // ignore: deprecated_member_use
+                child: RaisedButton(
+                    onPressed: () {},
+                    color: Color(0xFF4B2E83),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30)),
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(32, 16, 32, 16),
+                      child: Text('SIGN UP',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          )),
+                    )))),
+        Container(
+          padding: EdgeInsets.only(top: 5),
+          child: ButtonTheme(
+            minWidth: 178,
+            height: 19,
+            child: TextButton(
+              onPressed: () {},
+              child: Text(
+                "Forgot your Password ?",
+                style: TextStyle(
+                  fontFamily: 'Inter',
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  fontStyle: FontStyle.normal,
+                  color: Color(0xFF4B2E83),
                 ),
               ),
             ),
-            Container(
-              child: Text('AlmaConnect \nBITS',
-                  style: TextStyle(
-                    fontFamily: 'Roboto',
-                    fontSize: 40,
-                    fontWeight: FontWeight.bold,
-                  )),
-            ),
-            Card(elevation: 6,
-            margin: EdgeInsets.all(20),
-            child: Container(
-              padding: EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      height: 75,
-                      width: 75,
-                      child: Image.asset('images\face.png'),
-                    ),
-                    Text('I am a Mentee', textAlign: TextAlign.center, style: TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 20,
-                    )),
-                    Container(
-                      height: 44,
-                      width: 52,
-                      child: Image.asset('images\arrow.png'),
-                      ), ],
-                ),
-            ),
-            ),
-            Card(elevation: 6,
-            margin: EdgeInsets.all(20),
-            child: Container(
-              padding: EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Container(
-                      height: 75,
-                      width: 75,
-                      child: Image.asset('images\face.png'),
-                    ),
-                    Text('I am a Mentor', textAlign: TextAlign.center, style: TextStyle(
-                      fontFamily: 'Roboto',
-                      fontSize: 20,
-                    )),
-                    Container(
-                      height: 44,
-                      width: 52,
-                      child: Image.asset('images\arrow.png'),
-                      ), ],
-                ),
-            ),
-            ),
-          ],),
-          ),),
-          );
-          }
-          }
-
+          ),
+        )
+      ]),
+    )));
+  }
+}
