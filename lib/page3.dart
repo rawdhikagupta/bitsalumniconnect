@@ -67,7 +67,7 @@ class _PagethreeState extends State<_Pagethree> {
                     ),
                     Text('I am a Mentee', textAlign: TextAlign.center, style: TextStyle(
                       fontFamily: 'Roboto',
-                      fontSize: 20,
+                      fontSize: 25,
                     )),
                     Container(
                       height: 44,
@@ -91,7 +91,7 @@ class _PagethreeState extends State<_Pagethree> {
                     ),
                     Text('I am a Mentor', textAlign: TextAlign.center, style: TextStyle(
                       fontFamily: 'Roboto',
-                      fontSize: 20,
+                      fontSize: 25,
                     )),
                     Container(
                       height: 44,
