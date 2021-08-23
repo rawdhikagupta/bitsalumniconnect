@@ -1,3 +1,4 @@
+import 'package:bitsalumniconnect/page4.dart';
 import 'package:flutter/material.dart';
 import 'homepage.dart';
 import 'page 6.dart';
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Page_six(),
+      debugShowCheckedModeBanner: false,
+      home: PageFour(),
     );
   }
 }
