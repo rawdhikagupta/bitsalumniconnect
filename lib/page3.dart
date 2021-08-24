@@ -46,6 +46,15 @@ class _PagethreeState extends State<Pagethree> {
               ),
             ),
             Container(
+                    child: Text(
+                      'Welcome to',
+                      style: TextStyle(
+                        fontFamily: 'Roboto',
+                        fontSize: 40,
+                      ),
+                    ),
+                  ),
+            Container(
               child: Text('AlmaConnect \nBITS',
                   style: TextStyle(
                     fontFamily: 'Roboto',
