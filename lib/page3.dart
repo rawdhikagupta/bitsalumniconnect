@@ -57,13 +57,14 @@ class _PagethreeState extends State<Pagethree> {
             margin: EdgeInsets.all(20),
             child: Container(
               padding: EdgeInsets.all(20),
+              color: Color.fromRGBO(75, 46, 131, 0.15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
                       height: 75,
                       width: 75,
-                      child: Image.asset('images\face.png'),
+                      child: Image.asset('images/face.png'),
                     ),
                     Text('I am a Mentee', textAlign: TextAlign.center, style: TextStyle(
                       fontFamily: 'Roboto',
@@ -72,13 +73,14 @@ class _PagethreeState extends State<Pagethree> {
                     Container(
                       height: 44,
                       width: 52,
-                      child: Image.asset('images\arrow.png'),
+                      child: Image.asset('images/arrow.png'),
                       ), ],
                 ),
             ),
             ),
             Card(elevation: 6,
             margin: EdgeInsets.all(20),
+                 color: Color.fromRGBO(75, 46, 131, 0.15),
             child: Container(
               padding: EdgeInsets.all(20),
               child: Row(
@@ -87,7 +89,7 @@ class _PagethreeState extends State<Pagethree> {
                     Container(
                       height: 75,
                       width: 75,
-                      child: Image.asset('images\face.png'),
+                      child: Image.asset('images/face.png'),
                     ),
                     Text('I am a Mentor', textAlign: TextAlign.center, style: TextStyle(
                       fontFamily: 'Roboto',
@@ -96,7 +98,7 @@ class _PagethreeState extends State<Pagethree> {
                     Container(
                       height: 44,
                       width: 52,
-                      child: Image.asset('images\arrow.png'),
+                      child: Image.asset('images/arrow.png'),
                       ), ],
                 ),
             ),
