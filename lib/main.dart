@@ -1,5 +1,6 @@
-import 'package:bitsalumniconnect/Onboarding%205.dart';
+import 'package:bitsalumniconnect/Onboarding5.dart';
 import 'package:bitsalumniconnect/page4.dart';
+import 'package:bitsalumniconnect/signuppage.dart';
 import 'package:flutter/material.dart';
 import 'homepage.dart';
 import 'page 6.dart';
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PageFour(),
+      home: Homepage(),
     );
   }
 }
