@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Progressindicator.dart';
 
 class Page_six extends StatefulWidget {
   const Page_six({Key? key}) : super(key: key);
@@ -8,8 +9,6 @@ class Page_six extends StatefulWidget {
 }
 
 class _Page_sixState extends State<Page_six> {
-  final _pageController = PageController();
-  final _currentPageNotifier = ValueNotifier<int>(0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -108,7 +107,8 @@ class _Page_sixState extends State<Page_six> {
             ),
             SizedBox(
               height: 20,
-            )
+            ),
+           Progressbar(4),
           ]),
         ),
       ),
@@ -123,20 +123,26 @@ class LeftChatbox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.topLeft,
-      padding: EdgeInsets.only(left: 39),
-      child: Stack(children: [
-        Image.asset('images/icon1.png'),
-        Padding(
-          padding: const EdgeInsets.all(30.0),
-          child: Text('$text',
-              style: TextStyle(
-                fontFamily: 'Roboto',
-                fontSize: textsize,
-              )),
+    return Column(
+      children: [
+        Container(
+          alignment: Alignment.topLeft,
+          padding: EdgeInsets.only(left: 39),
+          child: Stack(children: [
+            Image.asset('images/icon1.png'),
+            Padding(
+              padding: const EdgeInsets.all(30.0),
+              child: Text('$text',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: textsize,
+                  )),
+            ),
+
+          ],
         ),
-      ]),
+         ),
+      ],
     );
   }
 }

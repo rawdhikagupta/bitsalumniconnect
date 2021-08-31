@@ -2,7 +2,7 @@ import 'package:bitsalumniconnect/utils/asset_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_view_indicators/linear_progress_page_indicator.dart';
-
+import 'Progressindicator.dart';
 class PageFour extends StatefulWidget {
   const PageFour({Key? key}) : super(key: key);
 
@@ -20,6 +20,7 @@ class _PageFourState extends State<PageFour> {
       bottom: false,
       child: Scaffold(
         body: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               alignment: Alignment.topRight,
@@ -70,10 +71,8 @@ class _PageFourState extends State<PageFour> {
             ),
             SizedBox(height: 20),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: 30,
-                ),
                 CircleAvatar(
                   backgroundColor: Colors.black,
                   radius: 38,
@@ -111,10 +110,8 @@ class _PageFourState extends State<PageFour> {
             ),
             SizedBox(height: 20),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: 30,
-                ),
                 CircleAvatar(
                   backgroundColor: Colors.black,
                   radius: 38,
@@ -152,10 +149,8 @@ class _PageFourState extends State<PageFour> {
             ),
             SizedBox(height: 20),
             Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: 30,
-                ),
                 CircleAvatar(
                   backgroundColor: Colors.black,
                   radius: 38,
@@ -207,41 +202,8 @@ class _PageFourState extends State<PageFour> {
             SizedBox(
               height: 50,
             ),
-            Row(
-              children: [
-                Padding(
-                    padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
-                    child: Image.asset('images/left.png')),
-                _buildLinearProgressIndicator(),
-                Padding(
-                    padding: EdgeInsets.fromLTRB(208, 0, 5, 0),
-                    child: Image.asset('images/right.png'))
-              ],
-            ),
-            Text(
-              "2/4",
-              style: TextStyle(color: Colors.black, fontSize: 20),
-            )
+            Progressbar(2),
           ],
-        ),
-      ),
-    );
-  }
-
-  _buildLinearProgressIndicator() {
-    return LayoutBuilder(
-      builder: (BuildContext context, BoxConstraints constraints) => Align(
-        alignment: Alignment.bottomLeft,
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(10, 10, 50, 10),
-          child: LinearProgressPageIndicator(
-            itemCount: 4,
-            currentPageNotifier: _currentPageNotifier,
-            progressColor: Color(0xFF4B2E83),
-            //  width: constraints.maxWidth,
-            width: 250,
-            height: 5,
-          ),
         ),
       ),
     );

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'progressindicator.dart';
 class Pagethree extends StatefulWidget {
   const Pagethree({Key? key}) : super(key: key);
 
@@ -14,7 +14,9 @@ class _PagethreeState extends State<Pagethree> {
       body: SafeArea(
         bottom: false,
         child: SingleChildScrollView(
-          child: Column(children: [
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
             Container(
               alignment: Alignment.topRight,
               margin: EdgeInsets.all(10),
@@ -45,15 +47,18 @@ class _PagethreeState extends State<Pagethree> {
                 ),
               ),
             ),
-            Container(
-                    child: Text(
-                      'Welcome to',
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        fontSize: 40,
+            Padding(
+              padding: const EdgeInsets.only(right:50),
+              child: Container(
+                      child: Text(
+                        'Welcome to',
+                        style: TextStyle(
+                          fontFamily: 'Roboto',
+                          fontSize: 40,
+                        ),
                       ),
                     ),
-                  ),
+            ),
             Container(
               child: Text('AlmaConnect \nBITS',
                   style: TextStyle(
@@ -112,6 +117,7 @@ class _PagethreeState extends State<Pagethree> {
                 ),
             ),
             ),
+            Progressbar(1),
           ],),
           ),),
           );
