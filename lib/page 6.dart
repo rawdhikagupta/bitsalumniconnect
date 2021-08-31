@@ -8,6 +8,8 @@ class Page_six extends StatefulWidget {
 }
 
 class _Page_sixState extends State<Page_six> {
+  final _pageController = PageController();
+  final _currentPageNotifier = ValueNotifier<int>(0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
